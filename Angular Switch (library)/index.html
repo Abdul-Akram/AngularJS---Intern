@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="libraryApp">
+
+<head>
+  <title>Library Book Genre Selector</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body>
+<center>
+  <div ng-controller="LibraryController">
+
+    <h1>Library Book Genre Selector</h1>
+
+    <label for="genre">Select a genre:</label>
+    <select ng-model="selectedGenre">
+      <option value="Fiction">Fiction</option>
+      <option value="Horror">Horror</option>
+      <option value="Action">Action</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Comics">Comics</option>
+      <option value="Adventure">Adventure</option>
+      <option value="Mystery">Mystery</option>
+    </select><br><br>
+
+    <div ng-switch="selectedGenre">
+
+      <div ng-switch-when="Fiction" class="genre-details">
+        <h2>Fiction Books</h2>
+        <p>Explore the world of imagination and creativity.</p>
+      </div>
+
+      <div ng-switch-when="Horror" class="genre-details">
+        <h2>Horror Books</h2>
+        <p>Experience fear and suspense with these chilling reads.</p>
+      </div>
+
+      <div ng-switch-when="Action" class="genre-details">
+        <h2>Action Books</h2>
+        <p>Uncover secrets and solve puzzles with these thrilling reads.</p>
+      </div>
+
+      <div ng-switch-when="Fantasy" class="genre-details">
+        <h2>Fantasy Books</h2>
+        <p>Embark on epic adventures in magical realms.</p>
+      </div>
+
+      <div ng-switch-when="Comics" class="genre-details">
+        <h2>Comics</h2>
+        <p>Explore visual storytelling and graphic narratives.</p>
+      </div>
+
+      <div ng-switch-when="Adventure" class="genre-details">
+        <h2>Adventure Books</h2>
+        <p>Experience thrilling journeys and daring escapades.</p>
+      </div>
+
+      <div ng-switch-when="Mystery" class="genre-details">
+        <h2>Mystery Books</h2>
+        <p>Delve into enigmatic stories and solve perplexing mysteries.</p>
+      </div>
+
+      <!-- Add more cases for other genres -->
+
+      <div ng-switch-default class="genre-details">
+        <h2>No Details Available</h2>
+        <p>Select a genre to see more details.</p>
+      </div>
+
+    </div>
+  </div>
+  </center>
+
+  <script>
+    angular.module('libraryApp', [])
+      .controller('LibraryController', function () {
+        var genre=this;
+        genre.selectedGenre='';
+    
+      });
+  </script>
+  <style>
+    .genre-details{
+        border: 2px solid;
+    }
+  </style>
+
+</body>
+
+</html>

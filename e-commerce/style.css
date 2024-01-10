@@ -1,0 +1,111 @@
+body{
+    background-color: rgba(236, 171, 171, 0.288);
+}
+.title{
+    text-align: left;
+}
+th,td{
+    padding: 20px;
+}
+th,h1{
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+button{
+    background-color: black;
+    font-size: 20px;
+}
+a:link {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+ }
+ a:visited {
+    color: rgb(254, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+ }
+ a:active {
+    color: rgb(218, 53, 53);
+    background-color: transparent;
+ }
+h1{
+
+    margin-left: 20px;
+    color: aliceblue;
+}
+.title{
+    background-color: rgb(245, 4, 4);
+}
+.i{
+    animation: example 4s infinite;
+}
+#b1{
+    position: absolute;
+    width:720px;
+    height:560px;
+}
+#b2{
+    position: absolute; 
+    margin-top: 580px;
+    width:720px;
+    height:560px;
+}
+#b3{
+    position: absolute;
+    margin-top: 1165px;
+    width:720px;
+    height:530px;
+}
+@keyframes example {
+    0% {
+        border: 2px solid rgb(17, 0, 255);
+    }
+    25% {
+        border: 2px solid rgb(248, 0, 0);
+    }
+
+    50% {
+        border: 2px solid rgb(190, 18, 119);
+    }
+    75% {
+        border: 2px solid rgb(0, 0, 0);
+    }
+    100% {
+        border: 2px solid rgb(21, 136, 21);
+    }    
+}
+button:hover{
+    scale: 110%;
+}
+.banner{
+    margin-right: 695px;
+}
+@media screen and (max-width:650px) {
+    th,h1{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    th,td{
+        padding: 10px;
+    }
+    .title{
+        min-width: 650px;
+        width: fit-content;
+        background-color: rgb(245, 4, 4);
+    }
+    #b1,#b2,#b3{
+        width: 345px;
+        height: 440px;
+
+    }
+    #b1{
+        margin-top:20px;
+    }
+    #b2{
+        margin-top:565px;
+    }
+    #b3{
+        margin-top:1100px;
+    }
+}
